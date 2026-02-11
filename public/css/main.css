@@ -1,0 +1,52 @@
+body {
+    background-color: var(--color-one);
+}
+
+header .logo,
+.icon {
+    padding: 10px;
+    background: var(--color-two);
+    border-radius: var(--border-radius-one);
+}
+
+.btn-link {
+    border-radius: var(--border-radius-one);
+    background: var(--color-two);
+}
+
+.floating {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hr-section {
+    border-top: 1px solid var(--color-two);
+}
+
+.card {
+    border: 1px solid var(--color-two);
+    border-radius: var(--border-radius-one);
+}
+
+.icon {
+    width: 50px;
+}
+
+footer {
+  background-color: var(--color-three);
+}
+
+.section-gradient {
+  background-color: #625fff25;
+}
