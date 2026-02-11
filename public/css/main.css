@@ -48,5 +48,5 @@ footer {
 }
 
 .section-gradient {
-  background-color: #625fff25;
+  background-color: var(--color-four);
 }
