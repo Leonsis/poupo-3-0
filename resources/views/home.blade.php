@@ -15,7 +15,7 @@
                     <h1 class="text-5xl font-bold text-center mt-4 text-white">Organize suas finanças</h1>
                     <p class="text-center mt-4 text-white max-w-3xl mx-auto">Sistema completo de organização financeira com inteligência artificial. Controle seus gastos, planeje seu futuro e alcance suas metas financeiras.</p>            
                     <div class="flex justify-center mt-6">
-                        <a class="btn-link px-4 py-2 text-white" href="#">
+                        <a class="btn-link px-4 py-2 text-white" href="{{ route('register') }}">
                             Começar Agora
                         </a>
                     </div>
@@ -116,7 +116,7 @@
                 <h2 class="text-4xl font-bold text-center mt-4 text-white">Pronto para transformar suas finanças?</h2>
                 <p class="text-center mt-4 text-white">Junte-se a milhares de usuários que já organizaram suas vidas financeiras</p>
                 <div class="flex justify-center mt-6">
-                    <a class="btn-link px-4 py-2 text-white" href="#">
+                    <a class="btn-link px-4 py-2 text-white" href="{{ route('register') }}">
                         Criar uma conta
                     </a>
                 </div>

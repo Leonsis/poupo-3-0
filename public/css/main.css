@@ -53,7 +53,9 @@ footer {
 
 
 div.privacyPolicy div.bd,
-div.termsUse div.bd {
+div.termsUse div.bd,
+div.login div.bd,
+div.register div.bd {
   border: 1px solid var(--color-two);
   border-radius: var(--border-radius-one);
   background-color: var(--color-four);                                

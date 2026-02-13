@@ -33,5 +33,6 @@
         @yield('content')
         
         @include('inc.footer')
+        <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>
