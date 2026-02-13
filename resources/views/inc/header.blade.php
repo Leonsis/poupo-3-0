@@ -16,7 +16,7 @@
             </div>
         </div>           
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+            <a href="{{ route('login') }}" class="text-sm/6 font-semibold text-white btn-link px-4 py-2">Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
     </nav>        
 </header>
