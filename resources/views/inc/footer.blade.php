@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="text-gray-400 hover:underline">
+                    <a href="{{ route('terms.use') }}" class="text-gray-400 hover:underline">
                         <div class="flex items-center gap-2">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20px">
