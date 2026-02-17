@@ -1,5 +1,5 @@
+// JavaScript para alternar a visibilidade da senha.
 const elementEye = document.querySelectorAll('.eye');
- 
 elementEye.forEach(function (eye) {
 
     eye.addEventListener('click', function() {

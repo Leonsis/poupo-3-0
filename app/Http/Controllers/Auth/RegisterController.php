@@ -6,13 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class RegisterController extends Controller
 {
     /**
-     * Exibe a página de login.
+     * Exibe a página de registro.
     */
-    public function login() 
+    public function register() 
     {
-        return view('login');
+        return view('register');
     }
 }
