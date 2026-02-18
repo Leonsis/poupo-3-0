@@ -1,54 +1,145 @@
-<h1 align="center">
-    Poupo 3.0
-</h1>
+# 🐷 Poupo 3.0
 
-## About Project
+O **Poupo 3.0** é a terceira versão do sistema Poupo, desenvolvido com foco em organização financeira personalizada, performance e uma experiência mais clean e intuitiva.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Esta versão foi reformulada utilizando tecnologias modernas e boas práticas de desenvolvimento, garantindo maior escalabilidade, organização de código e otimização de interface.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Sobre o Projeto
 
-## Learning Laravel
+O **Poupo 3.0** tem como principal objetivo permitir que o usuário organize suas finanças da forma que desejar, oferecendo flexibilidade na gestão de receitas, despesas e controle financeiro.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Nesta versão, o sistema foi totalmente reestruturado para:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Melhorar a performance
+- Modernizar a interface
+- Tornar a experiência mais fluida
+- Facilitar manutenção e evolução do projeto
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠️ Tecnologias Utilizadas
 
-### Premium Partners
+O projeto foi desenvolvido com as seguintes tecnologias:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **Laravel** – Framework PHP moderno e robusto  
+- **Blade** – Engine de templates do Laravel  
+- **MySQL** – Banco de dados relacional  
+- **Tailwind CSS** – Framework CSS utilitário para construção de interfaces modernas  
+- **Vite** – Bundler moderno para build e gerenciamento de assets  
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🎯 Objetivo
 
-## Code of Conduct
+O Poupo 3.0 foi criado para:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Organizar receitas e despesas  
+- Permitir controle financeiro personalizado  
+- Oferecer visualização clara das informações  
+- Proporcionar uma interface clean e otimizada  
+- Garantir escalabilidade para futuras versões  
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🖥️ Interface
 
-## License
+A nova interface foi projetada com:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Design minimalista  
+- Componentes reutilizáveis  
+- Layout responsivo  
+- Melhor experiência do usuário (UX)  
+- Performance otimizada  
+
+---
+
+## 📂 Estrutura do Projeto
+
+O sistema segue a estrutura padrão do Laravel:
+
+```bash
+app/
+routes/
+resources/views/
+database/
+public/
+```
+
+Organizando responsabilidades entre:
+
+- Controllers  
+- Models  
+- Views (Blade)  
+- Services (quando aplicável)  
+
+---
+
+## ⚙️ Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/poupo-3-0.git
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd poupo-3-0
+```
+
+Instale as dependências:
+
+```bash
+composer install
+npm install
+```
+
+Configure o arquivo `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Gere a chave da aplicação:
+
+```bash
+php artisan key:generate
+```
+
+Configure o banco de dados no `.env` e execute:
+
+```bash
+php artisan migrate
+```
+
+Compile os assets com o Vite:
+
+```bash
+npm run dev
+```
+
+Inicie o servidor:
+
+```bash
+php artisan serve
+```
+
+---
+
+## 🔮 Futuras Implementações
+
+- Dashboard com gráficos financeiros  
+- Exportação de relatórios  
+- Metas financeiras  
+- Controle por categorias personalizadas  
+- Versão mobile otimizada  
+
+---
+
+## 👨‍💻 Versão
+
+**Poupo 3.0**  
+Terceira versão do sistema com arquitetura modernizada e foco total em organização financeira personalizada.
