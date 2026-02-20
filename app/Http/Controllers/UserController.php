@@ -21,7 +21,7 @@ class UserController extends Controller
             'tipo_conta'   => 'required|string', // 1 -> admin, 2 -> pessoal, 3 -> empresarial
             'name'       => 'required|string|max:255',
             'email'      => 'required|email|unique:users,email',
-            'senha'   => 'required|string|min:6',
+            'password'   => 'required|string|min:6',
             'dat_nasci' => 'required|date',
             'tel'      => 'required|string|max:20'
         ]);

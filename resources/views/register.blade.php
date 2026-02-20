@@ -62,7 +62,7 @@
                                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                     </svg>
                                 </div>
-                                <input class="input-password w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 bg-white dark:bg-dark-light text-gray-900 dark:text-light placeholder:text-gray-500 dark:placeholder:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed relative z-0 border-gray-300 dark:border-gray-600 focus:border-primary pl-10 pr-10" type="password" name="senha" placeholder="Digite sua senha" value="">
+                                <input class="input-password w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 bg-white dark:bg-dark-light text-gray-900 dark:text-light placeholder:text-gray-500 dark:placeholder:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed relative z-0 border-gray-300 dark:border-gray-600 focus:border-primary pl-10 pr-10" type="password" name="password" placeholder="Digite sua senha" value="">
                                 <div class="eye absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 z-10 cursor-pointer hover:text-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-5 h-5">
                                         <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
@@ -80,7 +80,7 @@
                                         <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                     </svg>
                                 </div>
-                                <input class="input-password w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 bg-white dark:bg-dark-light text-gray-900 dark:text-light placeholder:text-gray-500 dark:placeholder:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed relative z-0 border-gray-300 dark:border-gray-600 focus:border-primary pl-10 pr-10" type="password" name="confirmSenha" placeholder="Confirme sua senha" value="">
+                                <input class="input-password w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 bg-white dark:bg-dark-light text-gray-900 dark:text-light placeholder:text-gray-500 dark:placeholder:text-gray-400 disabled:opacity-50 disabled:cursor-not-allowed relative z-0 border-gray-300 dark:border-gray-600 focus:border-primary pl-10 pr-10" type="password" name="confirmpassword" placeholder="Confirme sua senha" value="">
                                 <div class="eye absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 z-10 cursor-pointer hover:text-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-5 h-5">
                                         <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
@@ -137,7 +137,7 @@
     </div>
 
     <script>
-        // JavaScript para verificar se as senhas coincidem e exibir uma mensagem de erro.        
+        // JavaScript para a verificação de dados e envio dos dados do formulario via Ajax.
         document.getElementById('formRegister').addEventListener('submit', function(e) {
             e.preventDefault(); // Impede o envio do formulário para validação
             
@@ -157,8 +157,8 @@
             }
 
             // Validação para verificar se as senhas coincidem
-            let password = form.querySelector('input[name="senha"]').value;
-            let confirmPassword = form.querySelector('input[name="confirmSenha"]').value;
+            let password = form.querySelector('input[name="password"]').value;
+            let confirmPassword = form.querySelector('input[name="confirmpassword"]').value;
             if(password !== confirmPassword) {
                 alert('As senhas não coincidem. Por favor, tente novamente.');
                 return;
@@ -186,7 +186,7 @@
                 if (xhr.status === 500) {
                     console.error(xhr.responseText);
                 }
-            }            
+            } 
             xhr.send(formData);
             console.log(xhr.responseText); // Para depuração
         });    
