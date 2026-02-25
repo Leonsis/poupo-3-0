@@ -14,7 +14,8 @@
             </div>
             <div class="rounded-xl shadow-lg transition-all duration-300 bd hover:shadow-xl">
                 <div class="p-6 ">
-                    <form class="space-y-6">
+                    <form method="POST" action="{{ route('authenticate') }}" class="space-y-6">
+                        @csrf
                         <div class="mb-4">
                             <label for="input-3l6ag7wtx" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
                             <div class="relative">
