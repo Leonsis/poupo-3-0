@@ -25,18 +25,20 @@
 
         {{-- tailwindcss --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <!-- <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col"> -->
     <body>
         @php
             $lastSegmentU = request()->segment(count(request()->segments()));
+            $public_pages = ['', 'login', 'privacy-policy', 'terms-use', 'register'];
         @endphp
 
-        @include(($lastSegmentU === 'dashboard') ? 'inc.headerDash' : 'inc.header')
+        @include((!in_array($lastSegmentU, $public_pages)) ? 'inc.headerDash' : 'inc.header')
 
         @yield('content')
         
         @include('inc.footer')
-        <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>        
     </body>
 </html>

@@ -31,7 +31,11 @@ header .logo,
 }
 
 .hr-section {
-    border-top: 1px solid var(--color-two);
+  border-top: 1px solid var(--color-two);
+}
+
+.hr-bottom {
+  border-bottom: 1px solid var(--color-two);
 }
 
 .card {
@@ -59,4 +63,9 @@ div.register div.bd {
   border: 1px solid var(--color-two);
   border-radius: var(--border-radius-one);
   background-color: var(--color-four);                                
+}
+
+.bd-solid {
+  border: 1px solid var(--color-two);
+  border-radius: var(--border-radius-one);
 }

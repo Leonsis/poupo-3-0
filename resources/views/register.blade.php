@@ -15,7 +15,7 @@
             <div class="rounded-xl shadow-lg transition-all duration-300 bd hover:shadow-xl ">
                 <div class="p-6 ">
 
-                    <form class="space-y-6" id="formRegister">                                                
+                    <form class="space-y-6" id="formRegisterUser">                                                
                          <!-- nwe block -->
                          <div class="w-full max-w-sm">
                             <label for="tipo_conta" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -138,7 +138,7 @@
 
     <script>
         // JavaScript para a verificação de dados e envio dos dados do formulario via Ajax.
-        document.getElementById('formRegister').addEventListener('submit', function(e) {
+        document.getElementById('formRegisterUser').addEventListener('submit', function(e) {
             e.preventDefault(); // Impede o envio do formulário para validação
             
             let form = this;        

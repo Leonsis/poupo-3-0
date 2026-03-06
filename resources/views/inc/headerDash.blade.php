@@ -24,8 +24,11 @@
     
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
-            <a href="{{ route('dashboard') }}" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Painel Financeiro</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Receitas</a>
+            @php
+              $lastSegmentU = request()->segment(count(request()->segments()));
+            @endphp
+            <a href="{{ route('dashboard') }}" aria-current="page" class="rounded-md {{ ($lastSegmentU === 'dashboard') ? 'bg-gray-950/50' : '' }} px-3 py-2 text-sm font-medium text-white">Painel Financeiro</a>
+            <a href="{{ route('receitas') }}" class="rounded-md {{ ($lastSegmentU === 'receitas') ? 'bg-gray-950/50' : '' }} px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Receitas</a>
             <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Despesas</a>
             <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Metas</a>
           </div>
@@ -58,7 +61,7 @@
   <div id="mobile-menu" class="hidden sm:hidden">
     <div class="space-y-1 px-2 pt-2 pb-3">
       <a href="{{ route('dashboard') }}" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Painel Financeiro</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Receitas</a>
+      <a href="{{ route('receitas') }}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Receitas</a>
       <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Despesas</a>
       <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Metas</a>
     </div>
