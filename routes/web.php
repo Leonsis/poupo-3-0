@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EarningsController;
 
 // Public routes
 Route::get('/', [HomeController::class, 'index'])->name('home'); // view
@@ -16,6 +17,9 @@ Route::get('/terms-use', [PageController::class, 'termsUse'])->name('terms.use')
 Route::middleware('guest')->group(function () { 
     Route::get('/login', [LoginController::class, 'login'])->name('login'); // view
     Route::get('/register', [RegisterController::class, 'register'])->name('register'); // view
+
+    // Rota para autenticação do usuario.
+    Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('authenticate'); // function
 });
 
 // Só pode acessar essa rota quem ESTÁ logado.
@@ -24,10 +28,11 @@ Route::middleware('auth')->group(function() {
     Route::get('/dashboard', function() { 
         return view('dashboard');
     })->name('dashboard');// view
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout'); // function
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');// function
+    Route::get('/receitas',[EarningsController::class, 'receitas'])->name('receitas');// view    
+    Route::post('/earnings', [EarningsController::class, 'store'])->name('earnings.store');// function
+    Route::delete('/delete-earnings/{id}', [EarningsController::class, 'delete'])->name('earnings.delete');// function com parametro
 });
 
 // Rota para registo de usuario na base de dados,
 Route::post('/user', [UserController::class, 'store'])->name('user.store'); // function
-// Rota para autenticação do usuario.
-Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('authenticate'); // function
